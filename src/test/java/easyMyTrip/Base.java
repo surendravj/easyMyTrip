@@ -14,7 +14,7 @@ public class Base {
 	Properties props = new Properties();
 	WebDriver driver;
 
-	public void intilizeDriver(String browser) throws IOException{
+	public void intilizeDriver(String browser) throws IOException {
 		switch (browser.toUpperCase()) {
 		case "GOOGLE":
 			System.setProperty("webdriver.chrome.driver", "src//test//resources//chromedriver.exe");
@@ -25,12 +25,14 @@ public class Base {
 			System.setProperty("webdriver.edge.driver", "src//test//resources//msedgedriver.exe");
 			driver = new EdgeDriver();
 			break;
+
 		case "FIREFOX":
 			System.setProperty("webdriver.gecko.driver", "src//test//resources//geckodriver.exe");
 			driver = new FirefoxDriver();
 			break;
 		}
-		FileReader reader=new FileReader("src//test//resources//config.properties");
+		
+		FileReader reader = new FileReader("src//test//resources//config.properties");
 		props.load(reader);
 	}
 

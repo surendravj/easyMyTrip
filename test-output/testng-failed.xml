@@ -5,6 +5,7 @@
     <classes>
       <class name="easyMyTrip.Login">
         <methods>
+          <include name="afterclass"/>
           <include name="beforeClass"/>
           <include name="test"/>
         </methods>
