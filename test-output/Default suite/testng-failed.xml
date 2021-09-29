@@ -5,8 +5,9 @@
     <classes>
       <class name="easyMyTrip.Registration">
         <methods>
+          <include name="test3"/>
           <include name="afterclass"/>
-          <include name="test"/>
+          <include name="beforeClass"/>
         </methods>
       </class> <!-- easyMyTrip.Registration -->
     </classes>

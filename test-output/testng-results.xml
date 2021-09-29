@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-29T15:38:53 IST" name="Practice Suite" finished-at="2021-09-29T15:38:53 IST" duration-ms="8">
+  <suite started-at="2021-09-29T17:00:53 IST" name="Default suite" finished-at="2021-09-29T17:01:22 IST" duration-ms="28591">
     <groups>
     </groups>
-    <test started-at="2021-09-29T15:38:53 IST" name="Features Testing" finished-at="2021-09-29T15:38:53 IST" duration-ms="8">
-    </test> <!-- Features Testing -->
-  </suite> <!-- Practice Suite -->
+    <test started-at="2021-09-29T17:00:53 IST" name="Default test" finished-at="2021-09-29T17:01:22 IST" duration-ms="28591">
+      <class name="easyMyTrip.Registration">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:easyMyTrip.Registration@566d0c69]" started-at="2021-09-29T17:00:53 IST" name="beforeClass" finished-at="2021-09-29T17:00:54 IST" duration-ms="897" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="test1()[pri:0, instance:easyMyTrip.Registration@566d0c69]" started-at="2021-09-29T17:00:54 IST" name="test1" finished-at="2021-09-29T17:01:21 IST" duration-ms="26864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="afterclass()[pri:0, instance:easyMyTrip.Registration@566d0c69]" started-at="2021-09-29T17:01:21 IST" name="afterclass" finished-at="2021-09-29T17:01:22 IST" duration-ms="792" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterclass -->
+      </class> <!-- easyMyTrip.Registration -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
