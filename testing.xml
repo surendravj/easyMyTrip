@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Practice Suite" verbose="1">
+	<test name="Features Testing">
+		<classes>
+			<class name="easyMyTrip.Login" />
+			<class name="easyMyTrip.Registration" />
+			<class name="easyMyTrip.Flights" />
+			<class name="easyMyTrip.Hotels" />
+		</classes>
+	</test>
+</suite>
