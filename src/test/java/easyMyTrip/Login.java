@@ -22,8 +22,6 @@ public class Login extends Base {
 	@Test
 	public void test() throws InterruptedException {
 		driver.get(props.getProperty("url"));
-		googleInputBox.sendKeys("Surendra");
-		googleInputBox.sendKeys(Keys.ENTER);
 	}
 
 	@AfterClass
