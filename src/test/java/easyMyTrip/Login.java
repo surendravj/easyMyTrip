@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 public class Login extends Base {
 
 	Login() throws IOException {
-		intilizeDriver("google");
+		loadProps();
+		intilizeDriver(props.getProperty("browser"));
 		PageFactory.initElements(driver, this);
-		System.out.println("Login");
 	}
 	
 }

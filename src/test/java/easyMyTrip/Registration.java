@@ -16,7 +16,8 @@ import org.testng.annotations.Test;
 public class Registration extends Base {
 
 	public Registration() throws IOException {
-		intilizeDriver("google");
+		loadProps();
+		intilizeDriver(props.getProperty("browser"));
 		PageFactory.initElements(driver, this);
 	}
 
@@ -50,14 +51,12 @@ public class Registration extends Base {
 	@FindBy(id = "ValidOtp")
 	private WebElement otpIsNotValidMsg;
 
-	
 	@BeforeClass
 	public void beforeClass() throws IOException {
 		driver.manage().window().maximize();
 		driver.get(props.getProperty("url"));
 	}
 
-	
 	// function to fill mobile number
 	public void FillForm(String number) {
 		accountRegistration.click();
@@ -67,8 +66,7 @@ public class Registration extends Base {
 		continueButton.click();
 	}
 
-	
-	//function to fill otp using scanner
+	// function to fill otp using scanner
 	public void fillOtp() {
 		try (Scanner sc = new Scanner(System.in)) {
 			String otp = sc.next();
@@ -78,14 +76,14 @@ public class Registration extends Base {
 
 	@Test
 	public void test1() throws Exception {
-		FillForm("9676258512");
+		FillForm(props.getProperty("mobileNumber"));
 		fillOtp();
 		login.click();
 	}
 
 	@Test
 	public void test2() {
-		FillForm("877848484");
+		FillForm(props.getProperty("wrongMobileNumber"));
 		boolean isErrorMsgDisplayed = errorMsg.isDisplayed();
 		assertTrue(isErrorMsgDisplayed);
 		assertEquals("* Enter a valid Email or Phone Number", errorMsg.getText());
@@ -93,7 +91,7 @@ public class Registration extends Base {
 
 	@Test
 	public void test3() throws Exception {
-		FillForm("9676258512");
+		FillForm(props.getProperty("mobileNumber"));
 		waitSomeTime();
 		otpResendLink.click();
 		waitSomeTime();

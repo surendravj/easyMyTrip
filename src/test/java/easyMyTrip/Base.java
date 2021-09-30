@@ -1,5 +1,6 @@
 package easyMyTrip;
 
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -18,7 +19,12 @@ public class Base {
 	Properties props = new Properties();
 	WebDriver driver;
 
-	public void intilizeDriver(String browser) throws IOException {
+	public void loadProps() throws IOException {
+		FileReader reader = new FileReader("src//test//resources//config.properties");
+		props.load(reader);
+	}
+
+	public void intilizeDriver(String browser) {
 		switch (browser.toUpperCase()) {
 		case "GOOGLE":
 			System.setProperty("webdriver.chrome.driver", "src//test//resources//chromedriver.exe");
@@ -36,8 +42,6 @@ public class Base {
 			break;
 		}
 
-		FileReader reader = new FileReader("src//test//resources//config.properties");
-		props.load(reader);
 	}
 
 	@SuppressWarnings("deprecation")
@@ -45,10 +49,10 @@ public class Base {
 		WebDriverWait wait = new WebDriverWait(driver, 3);
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public void waitSomeTime() {
-		driver.manage().timeouts().implicitlyWait(1,TimeUnit.SECONDS) ;
+		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	}
 
 }

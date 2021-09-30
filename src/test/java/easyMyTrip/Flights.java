@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 public class Flights extends Base {
 
 	public Flights() throws IOException {
-		intilizeDriver("google");
+		loadProps();
+		intilizeDriver(props.getProperty("browser"));
 		PageFactory.initElements(driver, this);
-		System.out.println("Flights");
 	}
 
 }
