@@ -9,9 +9,9 @@ public class Hotels extends Base {
 	
 
 	public Hotels() throws IOException {
-		intilizeDriver("google");
+		loadProps();
+		intilizeDriver(props.getProperty("browser"));
 		PageFactory.initElements(driver, this);
-		System.out.println("Hotels");
 	}
 
 	

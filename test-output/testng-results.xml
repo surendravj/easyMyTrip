@@ -2,58 +2,29 @@
 <testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-29T18:53:48 IST" name="Default suite" finished-at="2021-09-29T18:53:52 IST" duration-ms="3590">
+  <suite started-at="2021-09-30T09:23:10 IST" name="Default suite" finished-at="2021-09-30T09:23:14 IST" duration-ms="4722">
     <groups>
     </groups>
-    <test started-at="2021-09-29T18:53:48 IST" name="Default test" finished-at="2021-09-29T18:53:52 IST" duration-ms="3590">
+    <test started-at="2021-09-30T09:23:10 IST" name="Default test" finished-at="2021-09-30T09:23:14 IST" duration-ms="4722">
       <class name="easyMyTrip.Registration">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:easyMyTrip.Registration@7aad3f7d]" started-at="2021-09-29T18:53:48 IST" name="beforeClass" finished-at="2021-09-29T18:53:50 IST" duration-ms="1774" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:easyMyTrip.Registration@f2e4acf]" started-at="2021-09-30T09:23:10 IST" name="beforeClass" finished-at="2021-09-30T09:23:13 IST" duration-ms="3487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="test3()[pri:0, instance:easyMyTrip.Registration@7aad3f7d]" started-at="2021-09-29T18:53:50 IST" name="test3" finished-at="2021-09-29T18:53:52 IST" duration-ms="1595" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="test2()[pri:0, instance:easyMyTrip.Registration@f2e4acf]" started-at="2021-09-30T09:23:13 IST" name="test2" finished-at="2021-09-30T09:23:14 IST" duration-ms="792" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"link text","selector":"Resend OTP"}
-  (Session info: chrome=93.0.4577.82)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'LAPTOP-UDHCLDC6', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dbe35d2d89672f0e76b9da59c618995d, findElement {using=link text, value=Resend OTP}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\Users\vadap\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50948}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50948/devtoo..., se:cdpVersion: 93.0.4577.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dbe35d2d89672f0e76b9da59c618995d]]>
+              <![CDATA[expected [* Enter a valid Phone Number] but found [* Enter a valid Email or Phone Number]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"link text","selector":"Resend OTP"}
-  (Session info: chrome=93.0.4577.82)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-rc-1', revision: 'bc5511cbda'
-System info: host: 'LAPTOP-UDHCLDC6', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dbe35d2d89672f0e76b9da59c618995d, findElement {using=link text, value=Resend OTP}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 93.0.4577.82, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\Users\vadap\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50948}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50948/devtoo..., se:cdpVersion: 93.0.4577.82, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dbe35d2d89672f0e76b9da59c618995d
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:381)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:373)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
-at easyMyTrip.Registration.test3(Registration.java:94)
+              <![CDATA[java.lang.AssertionError: expected [* Enter a valid Phone Number] but found [* Enter a valid Email or Phone Number]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at easyMyTrip.Registration.test2(Registration.java:89)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -84,11 +55,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test3 -->
-        <test-method is-config="true" signature="afterclass()[pri:0, instance:easyMyTrip.Registration@7aad3f7d]" started-at="2021-09-29T18:53:52 IST" name="afterclass" finished-at="2021-09-29T18:53:52 IST" duration-ms="183" status="PASS">
+        </test-method> <!-- test2 -->
+        <test-method is-config="true" signature="afterclass()[pri:0, instance:easyMyTrip.Registration@f2e4acf]" started-at="2021-09-30T09:23:14 IST" name="afterclass" finished-at="2021-09-30T09:23:14 IST" duration-ms="373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterclass -->
