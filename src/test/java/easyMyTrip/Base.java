@@ -46,7 +46,7 @@ public class Base {
 
 	@SuppressWarnings("deprecation")
 	public void waitForElementPresence(By by) {
-		WebDriverWait wait = new WebDriverWait(driver, 3);
+		WebDriverWait wait = new WebDriverWait(driver,5);
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
 	}
 
