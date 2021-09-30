@@ -43,8 +43,9 @@ public class Login extends Base {
 		driver.findElement(cont).click();
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void test1() throws InterruptedException {
+		
 		fillNumber();
 		driver.findElement(use_pass).click();
 		driver.findElement(pass_word).sendKeys(props.getProperty("loginPassword"));
@@ -52,8 +53,9 @@ public class Login extends Base {
 		System.out.println("Login Successful");
 	}
 
-	@Test
+	@Test(priority = 2)
 	public void test2() throws InterruptedException {
+		driver.navigate().refresh();
 		driver.findElement(my_account).click();
 		driver.findElement(log_in).click();
 		driver.findElement(in_data).sendKeys(props.getProperty("wrongMobileNumber"));
@@ -63,8 +65,9 @@ public class Login extends Base {
 
 	}
 
-	@Test
+	@Test(priority = 2)
 	public void test3() throws InterruptedException {
+		driver.navigate().refresh();
 		fillNumber();
 		driver.findElement(use_pass).click();
 		driver.findElement(pass_word).sendKeys(props.getProperty("wrongLoginPassword"));
