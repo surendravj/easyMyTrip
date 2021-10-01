@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
@@ -22,9 +23,11 @@ public class Registration extends RegistrationPom {
 	}
 
 
+	@SuppressWarnings("deprecation")
 	@BeforeClass
 	public void beforeClass() throws IOException {
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(props.getProperty("url"));
 	}
 
@@ -45,23 +48,24 @@ public class Registration extends RegistrationPom {
 		}
 	}
 
-	@Test
-	public void test1() throws Exception {
+	@Test(priority = 3)
+	public void SuccesfullRegister() throws Exception {
 		FillForm(props.getProperty("mobileNumber"));
 		fillOtp();
 		login.click();
 	}
 
-	@Test
-	public void test2() {
+	@Test(priority = 1)
+	public void invalidMobileNumberTest() {
 		FillForm(props.getProperty("wrongMobileNumber"));
 		boolean isErrorMsgDisplayed = errorMsg.isDisplayed();
 		assertTrue(isErrorMsgDisplayed);
 		assertEquals("* Enter a valid Phone Number", errorMsg.getText());
+		driver.navigate().refresh();
 	}
 
-	@Test
-	public void test3() throws Exception {
+	@Test(priority = 2)
+	public void otpResendTest() throws Exception {
 		FillForm(props.getProperty("mobileNumber"));
 		waitSomeTime();
 		otpResendLink.click();

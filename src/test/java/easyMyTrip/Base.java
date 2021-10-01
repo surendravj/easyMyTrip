@@ -1,11 +1,15 @@
 package easyMyTrip;
 
-
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,12 +22,25 @@ public class Base {
 
 	protected Properties props = new Properties();
 	protected WebDriver driver;
-	
-	
+
+	protected XSSFWorkbook workbook;
+	protected XSSFSheet sheet;
 
 	public void loadProps() throws IOException {
 		FileReader reader = new FileReader("src//test//resources//config.properties");
 		props.load(reader);
+		File src = new File("src\\test\\resources\\easeMyTripFramework.xlsx");
+		FileInputStream fin = new FileInputStream(src);
+		workbook = new XSSFWorkbook(fin);
+	}
+	
+	public void setSheet(int index)
+	{
+		sheet=workbook.getSheetAt(index);
+	}
+
+	public String getValue(int row, int col) {
+		return sheet.getRow(row).getCell(col).getStringCellValue();
 	}
 
 	public void intilizeDriver(String browser) {
@@ -48,7 +65,7 @@ public class Base {
 
 	@SuppressWarnings("deprecation")
 	public void waitForElementPresence(By by) {
-		WebDriverWait wait = new WebDriverWait(driver,5);
+		WebDriverWait wait = new WebDriverWait(driver, 5);
 		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
 	}
 

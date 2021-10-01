@@ -2,9 +2,7 @@ package easyMyTrip;
 
 import static org.junit.Assert.assertTrue;
 import static org.testng.Assert.assertEquals;
-
 import java.io.IOException;
-
 import java.util.concurrent.TimeUnit;
 
 
@@ -12,7 +10,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import easyMyTripPom.LoginPom;
 
 public class Login extends LoginPom {
@@ -22,6 +19,7 @@ public class Login extends LoginPom {
 		intilizeDriver(props.getProperty("browser")); // selection of the web browser
 		PageFactory.initElements(driver, this);
 	}
+
 
 	@SuppressWarnings("deprecation")
 	@BeforeClass

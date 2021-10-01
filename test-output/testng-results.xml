@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-01T09:54:31 IST" name="Default suite" finished-at="2021-10-01T09:54:39 IST" duration-ms="8137">
+  <suite started-at="2021-10-01T14:07:07 IST" name="Default suite" finished-at="2021-10-01T14:07:16 IST" duration-ms="8581">
     <groups>
     </groups>
-    <test started-at="2021-10-01T09:54:31 IST" name="Default test" finished-at="2021-10-01T09:54:39 IST" duration-ms="8137">
-      <class name="easyMyTrip.Login">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:easyMyTrip.Login@7d755813]" started-at="2021-10-01T09:54:31 IST" name="beforeClass" finished-at="2021-10-01T09:54:35 IST" duration-ms="4223" status="PASS">
+    <test started-at="2021-10-01T14:07:07 IST" name="Default test" finished-at="2021-10-01T14:07:16 IST" duration-ms="8581">
+      <class name="easyMyTrip.Flights">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:easyMyTrip.Flights@9fc9f91]" started-at="2021-10-01T14:07:07 IST" name="beforeClass" finished-at="2021-10-01T14:07:10 IST" duration-ms="3100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="successFullLoginTest()[pri:3, instance:easyMyTrip.Login@7d755813]" started-at="2021-10-01T09:54:35 IST" name="successFullLoginTest" finished-at="2021-10-01T09:54:39 IST" duration-ms="3697" status="PASS">
+        <test-method signature="NavigateToFlights()[pri:1, instance:easyMyTrip.Flights@9fc9f91]" started-at="2021-10-01T14:07:10 IST" name="NavigateToFlights" finished-at="2021-10-01T14:07:12 IST" duration-ms="1260" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- successFullLoginTest -->
-        <test-method is-config="true" signature="afterclass()[pri:0, instance:easyMyTrip.Login@7d755813]" started-at="2021-10-01T09:54:39 IST" name="afterclass" finished-at="2021-10-01T09:54:39 IST" duration-ms="191" status="PASS">
+        </test-method> <!-- NavigateToFlights -->
+        <test-method signature="selectDepartureCity()[pri:2, instance:easyMyTrip.Flights@9fc9f91]" started-at="2021-10-01T14:07:12 IST" name="selectDepartureCity" finished-at="2021-10-01T14:07:12 IST" duration-ms="570" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterclass -->
-      </class> <!-- easyMyTrip.Login -->
+        </test-method> <!-- selectDepartureCity -->
+        <test-method signature="selectDestinationCity()[pri:3, instance:easyMyTrip.Flights@9fc9f91]" started-at="2021-10-01T14:07:12 IST" name="selectDestinationCity" finished-at="2021-10-01T14:07:13 IST" duration-ms="529" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectDestinationCity -->
+        <test-method signature="selectDates()[pri:4, instance:easyMyTrip.Flights@9fc9f91]" started-at="2021-10-01T14:07:13 IST" name="selectDates" finished-at="2021-10-01T14:07:13 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectDates -->
+        <test-method signature="checkClassSelectionTest()[pri:5, instance:easyMyTrip.Flights@9fc9f91]" started-at="2021-10-01T14:07:13 IST" name="checkClassSelectionTest" finished-at="2021-10-01T14:07:13 IST" duration-ms="206" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkClassSelectionTest -->
+        <test-method signature="selectTravellers()[pri:6, instance:easyMyTrip.Flights@9fc9f91]" started-at="2021-10-01T14:07:13 IST" name="selectTravellers" finished-at="2021-10-01T14:07:16 IST" duration-ms="2406" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectTravellers -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:easyMyTrip.Flights@9fc9f91]" started-at="2021-10-01T14:07:16 IST" name="afterClass" finished-at="2021-10-01T14:07:16 IST" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- easyMyTrip.Flights -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
