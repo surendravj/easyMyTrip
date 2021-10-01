@@ -10,13 +10,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.interactions.Actions;
+
 
 public class Base {
 
@@ -64,14 +64,15 @@ public class Base {
 	}
 
 	@SuppressWarnings("deprecation")
-	public void waitForElementPresence(By by) {
-		WebDriverWait wait = new WebDriverWait(driver, 5);
-		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(by));
-	}
-
-	@SuppressWarnings("deprecation")
 	public void waitSomeTime() {
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+	}
+	
+	public void moveToElement(WebElement element)
+	{
+		Actions actions = new Actions(driver);
+		actions.moveToElement(element);
+		actions.perform();
 	}
 
 }

@@ -5,9 +5,9 @@
     <classes>
       <class name="easyMyTrip.Flights">
         <methods>
+          <include name="verifyContactEmail"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
-          <include name="selectDestinationCity"/>
         </methods>
       </class> <!-- easyMyTrip.Flights -->
     </classes>

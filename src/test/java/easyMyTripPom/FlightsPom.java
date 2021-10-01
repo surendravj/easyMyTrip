@@ -83,4 +83,52 @@ public class FlightsPom extends Base {
 	@FindBy(css = "input[onclick='SearchFlightWithArmy();']")
 	protected WebElement searchButton;
 
+	@FindBy(id = "DivOut1")
+	protected WebElement fromFlightSelection;
+
+	@FindBy(id = "DivIN1")
+	protected WebElement toFlightSelection;
+
+	@FindBy(xpath = "//span[normalize-space()='AI-541']")
+	protected WebElement fromFlightId;
+
+	@FindBy(xpath = "//span[normalize-space()='AI-542']")
+	protected WebElement toFlightId;
+
+	@FindBy(css = "div[class='row hidden-xs'] div:nth-child(1) div:nth-child(1) div:nth-child(5) p:nth-child(1) span:nth-child(2)")
+	protected WebElement fromFlightPrice;
+
+	@FindBy(css = "div:nth-child(2) div:nth-child(1) div:nth-child(5) p:nth-child(1) span:nth-child(2)")
+	protected WebElement toFlightPrice;
+
+	@FindBy(css = "p[class='stk_btm_price '] span[class='ng-binding']")
+	protected WebElement flightTotalPrice;
+
+	@FindBy(css = "#BtnBookNow")
+	protected WebElement bookNowBtn;
+
+	@FindBy(css = "a[ng-click='SelectedFlight_LRT(bookNow)']")
+	protected WebElement continueBtn;
+
+	@FindBy(css = ".bg-head")
+	protected WebElement medicalRefundDiv;
+
+	@FindBy(css = "input[ng-click='FeemedicalPolicy(true)']")
+	protected WebElement medicalRefundCheckBox;
+
+	@FindBy(className = "pr-l")
+	protected WebElement medicalRefundText;
+
+	@FindBy(id = "chkInsurance")
+	protected WebElement insurance;
+
+	@FindBy(id = "txtEmailId")
+	protected WebElement emailInput;
+
+	@FindBy(xpath = "//span[@id='spnVerifyEmail']")
+	protected WebElement continueBookingBtn;
+	
+	@FindBy(xpath = "//span[normalize-space()='Please enter a valid email Id']")
+	protected WebElement emailErrorMsg;
+
 }
