@@ -6,8 +6,8 @@
       <class name="easyMyTrip.Login">
         <methods>
           <include name="afterclass"/>
+          <include name="successFullLoginTest"/>
           <include name="beforeClass"/>
-          <include name="test3"/>
         </methods>
       </class> <!-- easyMyTrip.Login -->
     </classes>

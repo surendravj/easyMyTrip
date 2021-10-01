@@ -16,8 +16,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Base {
 
-	Properties props = new Properties();
-	WebDriver driver;
+	protected Properties props = new Properties();
+	protected WebDriver driver;
+	
+	
 
 	public void loadProps() throws IOException {
 		FileReader reader = new FileReader("src//test//resources//config.properties");

@@ -6,14 +6,14 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 import java.util.Scanner;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class Registration extends Base {
+import easyMyTripPom.RegistrationPom;
+
+public class Registration extends RegistrationPom {
 
 	public Registration() throws IOException {
 		loadProps();
@@ -21,35 +21,6 @@ public class Registration extends Base {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(className = "my_account")
-	private WebElement accountRegistration;
-
-	@FindBy(className = "signup_pnl")
-	private WebElement loginOrSignupButton;
-
-	@FindBy(className = "i-eml")
-	private WebElement errorMsg;
-
-	@FindBy(id = "txtEmail")
-	private WebElement username;
-
-	@FindBy(className = "sign-inn-v1")
-	private WebElement continueButton;
-
-	@FindBy(id = "txtEmail1")
-	private WebElement otpInput;
-
-	@FindBy(className = "otpsn")
-	private WebElement otpResendLink;
-
-	@FindBy(id = "OtpLgnBtn")
-	private WebElement login;
-
-	@FindBy(id = "OTPsent")
-	private WebElement otpResentSuccessMsg;
-
-	@FindBy(id = "ValidOtp")
-	private WebElement otpIsNotValidMsg;
 
 	@BeforeClass
 	public void beforeClass() throws IOException {
@@ -86,7 +57,7 @@ public class Registration extends Base {
 		FillForm(props.getProperty("wrongMobileNumber"));
 		boolean isErrorMsgDisplayed = errorMsg.isDisplayed();
 		assertTrue(isErrorMsgDisplayed);
-		assertEquals("* Enter a valid Email or Phone Number", errorMsg.getText());
+		assertEquals("* Enter a valid Phone Number", errorMsg.getText());
 	}
 
 	@Test
