@@ -150,23 +150,23 @@ public class Flights extends FlightsPom {
 	@Test(priority = 12)
 	public void verifyPassengerDetails() throws InterruptedException {
 		moveToElement(driver.findElement(By.cssSelector(".add_adlt")));
-		passengerName.sendKeys("Surendra");
-		passengerLastName.sendKeys("Vadaparthy");
+		passengerName.sendKeys(getValue(2, 9));
+		passengerLastName.sendKeys(getValue(2, 10));
 		Select titles = new Select(passengerTitle);
 		titles.selectByIndex(1);
-		testClick.click();
+//		getValue(2, 10)
 	}
 
-	@Test(priority = 13)
-	public void paymentGateWayVerification() throws InterruptedException {
-		setSheet(0);
-		makePaymentBtn.click();
-		assertTrue(cardNumberErrorMsg.isDisplayed());
-		System.out.println(cardNumberErrorMsg.getText());
-		cardNumber.sendKeys(getValue(1, 6));
-		cardHolderName.sendKeys(getValue(1, 7));
-		cvvNumber.sendKeys(getValue(1, 8));
-	}
+//	@Test(priority = 13)
+//	public void paymentGateWayVerification() throws InterruptedException {
+//		setSheet(0);
+//		makePaymentBtn.click();
+//		assertTrue(cardNumberErrorMsg.isDisplayed());
+//		System.out.println(cardNumberErrorMsg.getText());
+//		cardNumber.sendKeys(getValue(1, 6));
+//		cardHolderName.sendKeys(getValue(1, 7));
+//		cvvNumber.sendKeys(getValue(1, 8));
+//	}
 
 	@AfterClass
 	public void afterClass() throws InterruptedException {

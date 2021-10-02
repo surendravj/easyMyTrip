@@ -7,7 +7,6 @@
         <methods>
           <include name="beforeClass"/>
           <include name="afterClass"/>
-          <include name="verifyPassengerDetails"/>
           <include name="paymentGateWayVerification"/>
         </methods>
       </class> <!-- easyMyTrip.Flights -->
