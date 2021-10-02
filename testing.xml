@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="easeMyTrip Testing Suite" verbose="1">
-	<test name="Features Testing">
+<suite name="Functional testing of easeMyTrip" junit="false"
+	parallel="false" configfailurepolicy="skip" thread-count="5"
+	skipfailedinvocationcounts="false" data-provider-thread-count="10"
+	group-by-instances="false" preserve-order="true"
+	allow-return-values="false">
+	<test name="Flights one trip" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false">
+		<classes>
+			<class name="easyMyTrip.FlightsOneTrip" />
+		</classes>
+	</test>
+	<test name="Flight round trip" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false">
+		<classes>
+			<class name="easyMyTrip.Flights" />
+		</classes>
+	</test>
+	<test name="Login" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false">
 		<classes>
 			<class name="easyMyTrip.Login" />
+		</classes>
+	</test>
+	<test name="Registration" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false">
+		<classes>
+			<class name="easyMyTrip.Registration" />
 		</classes>
 	</test>
 </suite>

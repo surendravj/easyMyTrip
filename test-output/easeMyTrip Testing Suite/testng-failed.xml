@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [easeMyTrip Testing Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="methods" name="Flights round trip searching and booking(failed)">
+    <classes>
+      <class name="easyMyTrip.Flights">
+        <methods>
+          <include name="selectDepartureCity"/>
+          <include name="NavigateToFlights"/>
+          <include name="checkClassSelectionTest"/>
+          <include name="chooseFlightsTest"/>
+          <include name="selectTravellers"/>
+          <include name="verifyFlightDetails"/>
+          <include name="verifyPassengerDetails"/>
+          <include name="flightDetailsTest"/>
+          <include name="verifyContactEmail"/>
+          <include name="beforeClass"/>
+          <include name="selectDates"/>
+          <include name="afterClass"/>
+          <include name="selectDestinationCity"/>
+          <include name="verifyContactNumber"/>
+        </methods>
+      </class> <!-- easyMyTrip.Flights -->
+    </classes>
+  </test> <!-- Flights round trip searching and booking(failed) -->
+  <test thread-count="5" parallel="methods" name="Flights one trip searching and booking(failed)">
+    <classes>
+      <class name="easyMyTrip.FlightsOneTrip">
+        <methods>
+          <include name="couponOffer"/>
+          <include name="enterPhoneNumber"/>
+          <include name="beforeClass"/>
+          <include name="selectDestinationCity"/>
+          <include name="travelInsurance"/>
+          <include name="afterClass"/>
+          <include name="departureCitySelect"/>
+          <include name="travellerDetails"/>
+          <include name="selectTravellers"/>
+          <include name="contactEmail"/>
+          <include name="refundPolicy"/>
+          <include name="NavigateToOneWay"/>
+          <include name="selectFare"/>
+          <include name="checkClassSelection"/>
+        </methods>
+      </class> <!-- easyMyTrip.FlightsOneTrip -->
+    </classes>
+  </test> <!-- Flights one trip searching and booking(failed) -->
+</suite> <!-- Failed suite [easeMyTrip Testing Suite] -->

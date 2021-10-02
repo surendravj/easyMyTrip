@@ -7,7 +7,6 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -16,7 +15,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 
 public class Base {
@@ -55,13 +56,17 @@ public class Base {
 			break;
 
 		case "EDGE":
+			EdgeOptions optionsEdge = new EdgeOptions();
+			optionsEdge.addArguments("--disable-notifications");
 			System.setProperty("webdriver.edge.driver", "src//test//resources//msedgedriver.exe");
-			driver = new EdgeDriver();
+			driver = new EdgeDriver(optionsEdge);
 			break;
 
 		case "FIREFOX":
+			FirefoxOptions optionsFirefox = new FirefoxOptions();
+			optionsFirefox.addArguments("--disable-notifications");
 			System.setProperty("webdriver.gecko.driver", "src//test//resources//geckodriver.exe");
-			driver = new FirefoxDriver();
+			driver = new FirefoxDriver(optionsFirefox);
 			break;
 		}
 
