@@ -8,15 +8,16 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
-
 
 public class Base {
 
@@ -33,21 +34,24 @@ public class Base {
 		FileInputStream fin = new FileInputStream(src);
 		workbook = new XSSFWorkbook(fin);
 	}
-	
-	public void setSheet(int index)
-	{
-		sheet=workbook.getSheetAt(index);
+
+	public void setSheet(int index) {
+		sheet = workbook.getSheetAt(index);
 	}
 
 	public String getValue(int row, int col) {
-		return sheet.getRow(row).getCell(col).getStringCellValue();
+		DataFormatter dataFormatter = new DataFormatter();
+		String value = dataFormatter.formatCellValue(sheet.getRow(row).getCell(col));
+		return value;
 	}
 
 	public void intilizeDriver(String browser) {
 		switch (browser.toUpperCase()) {
 		case "GOOGLE":
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-notifications");
 			System.setProperty("webdriver.chrome.driver", "src//test//resources//chromedriver.exe");
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 			break;
 
 		case "EDGE":
@@ -67,9 +71,8 @@ public class Base {
 	public void waitSomeTime() {
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
 	}
-	
-	public void moveToElement(WebElement element)
-	{
+
+	public void moveToElement(WebElement element) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element);
 		actions.perform();

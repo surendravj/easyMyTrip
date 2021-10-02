@@ -130,5 +130,44 @@ public class FlightsPom extends Base {
 	
 	@FindBy(xpath = "//span[normalize-space()='Please enter a valid email Id']")
 	protected WebElement emailErrorMsg;
+	
+	@FindBy(id = "CC")
+	protected WebElement cardNumber;
+	
+	@FindBy(id = "CCN")
+	protected WebElement cardHolderName;
+	
+	@FindBy(id="CCMM")
+	protected WebElement cardMonth;
+	
+	@FindBy(id="CCYYYY")
+	protected WebElement cardYear;
+	
+	@FindBy(id="CCCVV")
+	protected WebElement cvvNumber;
+	
+	@FindBy(id="#spnCardErrorSpn")
+	protected WebElement cardNumberErrorMsg;
+	
+	@FindBy(className = "mk-pym")
+	protected WebElement makePaymentBtn;
+	
+	@FindBy(id="txtCPhone")
+	protected WebElement mobileNumber;
+	
+	@FindBy(id="spanError")
+	protected WebElement mobileNumberError;
+	
+	@FindBy(css = "#txtFNAdult0")
+	protected WebElement passengerName;
+	
+	@FindBy(css = "#txtLNAdult0")
+	protected WebElement passengerLastName;
+	
+	@FindBy(css = "#titleAdult0")
+	protected WebElement passengerTitle;
+	
+	@FindBy(xpath = "//span[@id='spnTransaction']")
+	protected WebElement testClick;
 
 }

@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\vadap\AppData\Local\Temp\testng-eclipse-2100855920\testng-customsuite.xml</span>
+                    <span>C:\Users\vadap\AppData\Local\Temp\testng-eclipse--639616227\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">13 methods, 2 failed,   11 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="easyMyTrip.Flights" class="method navigator-link" hash-for-method="paymentGateWayVerification">paymentGateWayVerification</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="easyMyTrip.Flights" class="method navigator-link" hash-for-method="verifyPassengerDetails">verifyPassengerDetails</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -149,6 +168,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="easyMyTrip.Flights" class="method navigator-link" hash-for-method="verifyContactNumber">verifyContactNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="easyMyTrip.Flights" class="method navigator-link" hash-for-method="verifyFlightDetails">verifyFlightDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -164,6 +188,147 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">easyMyTrip.Flights</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="paymentGateWayVerification">
+                  </a> <!-- paymentGateWayVerification -->
+                  <span class="method-name">paymentGateWayVerification</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=94.0.4606.61)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.0.0-rc-1&apos;, revision: &apos;bc5511cbda&apos;
+System info: host: &apos;LAPTOP-UDHCLDC6&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cdba95da6d7542b66c8f949700642832, clickElement {id=b6f9a11b-09bb-43c0-9e96-c19bdf1b8e88}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\Users\vadap\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58490/devtoo..., se:cdpVersion: 94.0.4606.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (cdba95da6d7542b66c8f949700642832)] -&gt; class: mk-pym]
+Session ID: cdba95da6d7542b66c8f949700642832
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at easyMyTrip.Flights.paymentGateWayVerification(Flights.java:163)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyPassengerDetails">
+                  </a> <!-- verifyPassengerDetails -->
+                  <span class="method-name">verifyPassengerDetails</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;co1&quot; id=&quot;spnTransaction&quot; ng-click=&quot;CreateTransaction_NewRpc(&apos;&apos;,&apos;CreateTransaction&apos;,&apos;&apos;)&quot;&gt;...&lt;/span&gt; is not clickable at point (463, 457). Other element would receive the click: &lt;div class=&quot;fli-not-fo ng-scope&quot; style=&quot;display: block;&quot; id=&quot;divFltNotFound_Trv&quot; ng-controller=&quot;ServiceController&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=94.0.4606.61)
+Build info: version: &apos;4.0.0-rc-1&apos;, revision: &apos;bc5511cbda&apos;
+System info: host: &apos;LAPTOP-UDHCLDC6&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [cdba95da6d7542b66c8f949700642832, clickElement {id=0287582b-b0ab-4af5-9219-56f16542d6ba}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.61, chrome: {chromedriverVersion: 93.0.4577.15 (660fc11082ba5..., userDataDir: C:\Users\vadap\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58490/devtoo..., se:cdpVersion: 94.0.4606.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (cdba95da6d7542b66c8f949700642832)] -&gt; xpath: //span[@id=&apos;spnTransaction&apos;]]
+Session ID: cdba95da6d7542b66c8f949700642832
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at easyMyTrip.Flights.verifyPassengerDetails(Flights.java:157)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -235,6 +400,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyContactNumber">
+                  </a> <!-- verifyContactNumber -->
+                  <span class="method-name">verifyContactNumber</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyFlightDetails">
                   </a> <!-- verifyFlightDetails -->
                   <span class="method-name">verifyFlightDetails</span>
@@ -245,7 +417,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\vadap\AppData\Local\Temp\testng-eclipse-2100855920\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\vadap\AppData\Local\Temp\testng-eclipse--639616227\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -294,52 +466,64 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(10);
+data.addRows(13);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyFlightDetails')
+data.setCell(0, 1, 'paymentGateWayVerification')
 data.setCell(0, 2, 'easyMyTrip.Flights')
-data.setCell(0, 3, 2712);
+data.setCell(0, 3, 5835);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'chooseFlightsTest')
+data.setCell(1, 1, 'verifyFlightDetails')
 data.setCell(1, 2, 'easyMyTrip.Flights')
-data.setCell(1, 3, 2054);
+data.setCell(1, 3, 2462);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'selectTravellers')
 data.setCell(2, 2, 'easyMyTrip.Flights')
-data.setCell(2, 3, 1619);
+data.setCell(2, 3, 2457);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'NavigateToFlights')
+data.setCell(3, 1, 'verifyPassengerDetails')
 data.setCell(3, 2, 'easyMyTrip.Flights')
-data.setCell(3, 3, 1174);
+data.setCell(3, 3, 1674);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'selectDepartureCity')
+data.setCell(4, 1, 'NavigateToFlights')
 data.setCell(4, 2, 'easyMyTrip.Flights')
-data.setCell(4, 3, 610);
+data.setCell(4, 3, 1297);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'selectDestinationCity')
+data.setCell(5, 1, 'flightDetailsTest')
 data.setCell(5, 2, 'easyMyTrip.Flights')
-data.setCell(5, 3, 598);
+data.setCell(5, 3, 841);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'flightDetailsTest')
+data.setCell(6, 1, 'verifyContactNumber')
 data.setCell(6, 2, 'easyMyTrip.Flights')
-data.setCell(6, 3, 596);
+data.setCell(6, 3, 811);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyContactEmail')
+data.setCell(7, 1, 'selectDepartureCity')
 data.setCell(7, 2, 'easyMyTrip.Flights')
-data.setCell(7, 3, 583);
+data.setCell(7, 3, 731);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'checkClassSelectionTest')
+data.setCell(8, 1, 'selectDestinationCity')
 data.setCell(8, 2, 'easyMyTrip.Flights')
-data.setCell(8, 3, 311);
+data.setCell(8, 3, 678);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'selectDates')
+data.setCell(9, 1, 'verifyContactEmail')
 data.setCell(9, 2, 'easyMyTrip.Flights')
-data.setCell(9, 3, 232);
+data.setCell(9, 3, 651);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'checkClassSelectionTest')
+data.setCell(10, 2, 'easyMyTrip.Flights')
+data.setCell(10, 3, 412);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'selectDates')
+data.setCell(11, 2, 'easyMyTrip.Flights')
+data.setCell(11, 3, 277);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'chooseFlightsTest')
+data.setCell(12, 2, 'easyMyTrip.Flights')
+data.setCell(12, 3, 237);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 18 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -372,47 +556,63 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">NavigateToFlights</span>
-                <span class="method-start">2442 ms</span>
+                <span class="method-start">2415 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectDepartureCity</span>
-                <span class="method-start">3624 ms</span>
+                <span class="method-start">3723 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectDestinationCity</span>
-                <span class="method-start">4236 ms</span>
+                <span class="method-start">4456 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectDates</span>
-                <span class="method-start">4835 ms</span>
+                <span class="method-start">5135 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">checkClassSelectionTest</span>
-                <span class="method-start">5069 ms</span>
+                <span class="method-start">5413 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">selectTravellers</span>
-                <span class="method-start">5382 ms</span>
+                <span class="method-start">5827 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">chooseFlightsTest</span>
-                <span class="method-start">7002 ms</span>
+                <span class="method-start">8286 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFlightDetails</span>
-                <span class="method-start">9058 ms</span>
+                <span class="method-start">8525 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">flightDetailsTest</span>
-                <span class="method-start">11771 ms</span>
+                <span class="method-start">10989 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyContactEmail</span>
-                <span class="method-start">12368 ms</span>
+                <span class="method-start">11833 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyContactNumber</span>
+                <span class="method-start">12486 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifyPassengerDetails</span>
+                <span class="method-start">13299 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">paymentGateWayVerification</span>
+                <span class="method-start">14981 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">12954 ms</span>
+                <span class="method-start">20818 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -26,9 +27,9 @@ public class Flights extends FlightsPom {
 	@SuppressWarnings("deprecation")
 	@BeforeClass
 	public void beforeClass() {
-		driver.get(props.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get(props.getProperty("url"));
 	}
 
 	@Test(priority = 1)
@@ -82,8 +83,10 @@ public class Flights extends FlightsPom {
 		infantsadd.click();
 		childrenadd.click();
 		childrensub.click();
+		adultsub.click();
+		infantssub.click();
 		doneButton.click();
-		assertTrue(travellerDropdown.getText().contains("3 Traveller(s)"));
+		assertTrue(travellerDropdown.getText().contains("1 Traveller(s)"));
 		searchButton.click();
 	}
 
@@ -105,13 +108,9 @@ public class Flights extends FlightsPom {
 		bookNowBtn.click();
 		continueBtn.click();
 	}
-	
-	
-	
 
 	@Test(priority = 9)
-	public void flightDetailsTest()
-	{
+	public void flightDetailsTest() {
 		moveToElement(medicalRefundDiv);
 		assertFalse(!medicalRefundText.isDisplayed());
 		medicalRefundCheckBox.click();
@@ -121,18 +120,52 @@ public class Flights extends FlightsPom {
 		insurance.click();
 		assertTrue(insurance.isEnabled());
 	}
-	
-	
+
 	@Test(priority = 10)
-	public void verifyContactEmail()
-	{
+	public void verifyContactEmail() {
+		setSheet(0);
 		moveToElement(driver.findElement(By.cssSelector(".emtSecure")));
 		emailInput.clear();
 		continueBookingBtn.click();
 		assertTrue(emailErrorMsg.isDisplayed());
 		assertEquals(emailErrorMsg.getText(), "Please enter a valid email Id");
-		emailInput.sendKeys("Vadaparthysurendra@gmal.com");
+		emailInput.sendKeys(getValue(1, 3));
 		continueBookingBtn.click();
+
+	}
+
+	@Test(priority = 11)
+	public void verifyContactNumber() {
+		setSheet(0);
+		mobileNumber.clear();
+		driver.findElement(By.xpath("//span[@id='spnTransaction']")).click();
+		assertTrue(mobileNumberError.isDisplayed());
+		assertEquals(mobileNumberError.getText(), "Please enter a valid mobile number");
+		mobileNumber.sendKeys(getValue(1, 5));
+		assertTrue(mobileNumberError.isDisplayed());
+		assertEquals(mobileNumberError.getText(), "Please enter a valid mobile number");
+		mobileNumber.sendKeys(getValue(1, 4));
+	}
+
+	@Test(priority = 12)
+	public void verifyPassengerDetails() throws InterruptedException {
+		moveToElement(driver.findElement(By.cssSelector(".add_adlt")));
+		passengerName.sendKeys("Surendra");
+		passengerLastName.sendKeys("Vadaparthy");
+		Select titles = new Select(passengerTitle);
+		titles.selectByIndex(1);
+		testClick.click();
+	}
+
+	@Test(priority = 13)
+	public void paymentGateWayVerification() throws InterruptedException {
+		setSheet(0);
+		makePaymentBtn.click();
+		assertTrue(cardNumberErrorMsg.isDisplayed());
+		System.out.println(cardNumberErrorMsg.getText());
+		cardNumber.sendKeys(getValue(1, 6));
+		cardHolderName.sendKeys(getValue(1, 7));
+		cvvNumber.sendKeys(getValue(1, 8));
 	}
 
 	@AfterClass
