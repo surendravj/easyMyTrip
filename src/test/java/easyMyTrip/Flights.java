@@ -122,42 +122,61 @@ public class Flights extends FlightsPom {
 	}
 
 	@Test(priority = 10)
-	public void verifyContactEmail() {
+	public void emailErrorMsgTest() {
 		setSheet(0);
 		moveToElement(driver.findElement(By.cssSelector(".emtSecure")));
 		emailInput.clear();
 		continueBookingBtn.click();
 		assertTrue(emailErrorMsg.isDisplayed());
 		assertEquals(emailErrorMsg.getText(), "Please enter a valid email Id");
+	}
+
+	@Test(priority = 11)
+	public void verifyContactEmail() {
 		emailInput.sendKeys(getValue(1, 3));
 		continueBookingBtn.click();
 
 	}
 
-	@Test(priority = 11)
-	public void verifyContactNumber() {
+	@Test(priority = 12)
+	public void invalidNumberTest() {
 		setSheet(0);
 		mobileNumber.clear();
 		driver.findElement(By.xpath("//span[@id='spnTransaction']")).click();
 		assertTrue(mobileNumberError.isDisplayed());
 		assertEquals(mobileNumberError.getText(), "Please enter a valid mobile number");
+	}
+
+	@Test(priority = 13)
+	public void verifyContactNumber() {
+		setSheet(0);
 		mobileNumber.sendKeys(getValue(1, 5));
 		assertTrue(mobileNumberError.isDisplayed());
 		assertEquals(mobileNumberError.getText(), "Please enter a valid mobile number");
 		mobileNumber.sendKeys(getValue(1, 4));
 	}
 
-	@Test(priority = 12)
-	public void verifyPassengerDetails() throws InterruptedException {
+	@Test(priority = 14)
+	public void firstNameInputTest() {
 		moveToElement(driver.findElement(By.cssSelector(".add_adlt")));
 		passengerName.sendKeys(getValue(2, 9));
-		passengerLastName.sendKeys(getValue(2, 10));
-		Select titles = new Select(passengerTitle);
-		titles.selectByIndex(1);
-//		getValue(2, 10)
+		assertEquals(passengerName.getAttribute("value"), "Surendra");
 	}
 
-//	@Test(priority = 13)
+	@Test(priority = 15)
+	public void lastNameInputTest() {
+		passengerLastName.sendKeys(getValue(2, 10));
+		assertEquals(passengerLastName.getAttribute("value"), "Vadaparthy");
+	}
+
+	@Test(priority = 16)
+	public void passengerTitleTest() {
+		Select titles = new Select(passengerTitle);
+		titles.selectByIndex(1);
+		assertEquals(titles.getFirstSelectedOption().getText(), "MR");
+	}
+
+//	@Test(priority = 17)
 //	public void paymentGateWayVerification() throws InterruptedException {
 //		setSheet(0);
 //		makePaymentBtn.click();
@@ -170,7 +189,6 @@ public class Flights extends FlightsPom {
 
 	@AfterClass
 	public void afterClass() throws InterruptedException {
-		Thread.sleep(3000);
 		driver.quit();
 	}
 

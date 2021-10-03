@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="easyMyTrip.Flights">
+      <class name="easyMyTrip.FlightsOneTrip">
         <methods>
+          <include name="couponOffer"/>
           <include name="beforeClass"/>
           <include name="afterClass"/>
-          <include name="paymentGateWayVerification"/>
+          <include name="travellerDetails"/>
         </methods>
-      </class> <!-- easyMyTrip.Flights -->
+      </class> <!-- easyMyTrip.FlightsOneTrip -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

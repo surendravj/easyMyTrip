@@ -130,26 +130,13 @@ public class FlightsOneTrip extends FlightsOneTripPom {
 		continueBookingBtn.click();
 	}
 	
-	@Test(priority =13)
-	public void travellerDetails() {
-		assertTrue(infomsg.isDisplayed());
-		assertTrue(adultcheckbox.isEnabled());
-		waitSomeTime();
-		adultTitle.click();
-		waitSomeTime();
-		titleMr.click();
-		setSheet(0);
-		adultFirtsName.sendKeys(getValue(2, 9));
-		adultLastName.sendKeys(getValue(2, 10));
-		frequentflyer.click();
-		waitSomeTime();
-		frequentflyernumber.click();
-		frequentflyernumber.sendKeys(props.getProperty("flyerno"));
-		airlines.sendKeys(getValue(2, 11));
-		mealpreference.click();
-		waitSomeTime();
-		nonveg.click();
-		assertEquals(grandtotalprice.getText(),"4,078");
+
+	@Test(priority =11)
+	public void enterPhoneNumber() throws Exception {
+		phonenumber.sendKeys(props.getProperty("mobileNumber"));
+		assertTrue(checkboxTandC.isEnabled());
+		contBooking.click();
+		Thread.sleep(5000);
 	}
 	
 	@Test(priority = 12)
@@ -161,15 +148,33 @@ public class FlightsOneTrip extends FlightsOneTripPom {
 		waitSomeTime();
 	}
 	
-	@Test(priority =11)
-	public void enterPhoneNumber() throws Exception {
-		phonenumber.sendKeys(props.getProperty("mobileNumber"));
-		assertTrue(checkboxTandC.isEnabled());
-		contBooking.click();
-		Thread.sleep(5000);
+	@Test(priority =13)
+	public void travellerDetails() {
+		assertTrue(infomsg.isDisplayed());
+		assertTrue(adultcheckbox.isEnabled());
+		waitSomeTime();
+		adultTitle.click();
+		waitSomeTime();
+		titleMr.click();
+		setSheet(0);
+		adultFirtsName.sendKeys(getValue(2, 9));
+		adultLastName.sendKeys(getValue(2, 10));
 	}
 	
-	
+	@Test(priority = 14)
+	public void preferenceTest()
+	{
+		frequentflyer.click();
+		waitSomeTime();
+		frequentflyernumber.click();
+		frequentflyernumber.sendKeys(props.getProperty("flyerno"));
+		airlines.sendKeys(getValue(2, 11));
+		mealpreference.click();
+		waitSomeTime();
+		nonveg.click();
+		assertEquals(grandtotalprice.getText(),"4,078");
+	}
+		
 	@AfterClass
 	public void afterClass() throws InterruptedException {
 		Thread.sleep(3000);

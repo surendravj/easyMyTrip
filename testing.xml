@@ -19,6 +19,13 @@
 			<class name="easyMyTrip.Flights" />
 		</classes>
 	</test>
+	<test name="Hotels" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false">
+		<classes>
+			<class name="easyMyTrip.Hotels" />
+		</classes>
+	</test>
 	<test name="Login" junit="false"
 		skipfailedinvocationcounts="false" preserve-order="true"
 		group-by-instances="false" allow-return-values="false">
