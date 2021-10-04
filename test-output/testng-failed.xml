@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Functional testing of easeMyTrip]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Flights one trip(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="easyMyTrip.FlightsOneTrip">
+      <class name="easyMyTrip.Flights">
         <methods>
-          <include name="couponOffer"/>
           <include name="beforeClass"/>
-          <include name="preferenceTest"/>
           <include name="afterClass"/>
+          <include name="paymentTest"/>
         </methods>
-      </class> <!-- easyMyTrip.FlightsOneTrip -->
+      </class> <!-- easyMyTrip.Flights -->
     </classes>
-  </test> <!-- Flights one trip(failed) -->
-  <test thread-count="5" name="Registration(failed)">
-    <classes>
-      <class name="easyMyTrip.Registration">
-        <methods>
-          <include name="otpResendTest"/>
-          <include name="afterclass"/>
-          <include name="beforeClass"/>
-          <include name="SuccesfullRegister"/>
-        </methods>
-      </class> <!-- easyMyTrip.Registration -->
-    </classes>
-  </test> <!-- Registration(failed) -->
-</suite> <!-- Failed suite [Functional testing of easeMyTrip] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

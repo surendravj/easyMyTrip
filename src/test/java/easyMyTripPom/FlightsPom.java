@@ -167,7 +167,8 @@ public class FlightsPom extends Base {
 	@FindBy(css = "#titleAdult0")
 	protected WebElement passengerTitle;
 	
-	@FindBy(xpath = "//span[@id='spnTransaction']")
-	protected WebElement testClick;
+	@FindBy(id = "spnTransaction")
+	protected WebElement continuebooking;
+	
 
 }

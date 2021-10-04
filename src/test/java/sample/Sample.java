@@ -1,20 +1,27 @@
-package easyMyTrip;
+package sample;
+
+import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertNotEquals;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
-import static org.junit.Assert.assertTrue;
-import static org.testng.Assert.assertEquals;
-
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import easyMyTripPom.FlightsOneTripPom;
 
-public class FlightsOneTrip extends FlightsOneTripPom {
-	public FlightsOneTrip() throws IOException {
+import easyMyTripPom.SamplePom;
+
+
+
+public class Sample extends SamplePom{
+
+
+	public Sample() throws IOException {
 		loadProps();
 		intilizeDriver(props.getProperty("browser"));
 		PageFactory.initElements(driver, this);
@@ -130,22 +137,6 @@ public class FlightsOneTrip extends FlightsOneTripPom {
 		continueBookingBtn.click();
 	}
 	
-
-	@Test(priority =11)
-	public void enterPhoneNumber() throws Exception {
-		phonenumber.sendKeys(props.getProperty("mobileNumber"));
-		assertTrue(checkboxTandC.isEnabled());
-	}
-	
-	@Test(priority = 12)
-	public void couponOffer() {
-		assertEquals(grandtotalprice.getText(),"5,177");
-		removecouponcode.click();
-		waitSomeTime();
-		couponcode.click();
-		waitSomeTime();
-	}
-	
 	@Test(priority =13)
 	public void travellerDetails() {
 		assertTrue(infomsg.isDisplayed());
@@ -157,11 +148,6 @@ public class FlightsOneTrip extends FlightsOneTripPom {
 		setSheet(0);
 		adultFirtsName.sendKeys(getValue(2, 9));
 		adultLastName.sendKeys(getValue(2, 10));
-	}
-	
-	@Test(priority = 14)
-	public void preferenceTest()
-	{
 		frequentflyer.click();
 		waitSomeTime();
 		frequentflyernumber.click();
@@ -171,23 +157,32 @@ public class FlightsOneTrip extends FlightsOneTripPom {
 		waitSomeTime();
 		nonveg.click();
 		assertEquals(grandtotalprice.getText(),"3,977");
+		Actions act = new Actions(driver);
+		act.moveToElement(contBooking).doubleClick();
 	}
 	
-	@Test(priority = 15)
-	public void paymentTest() throws Exception {
-		Thread.sleep(5000);
-		continuebooking.click();
-		makePaymentBtn.click();
-		//assertTrue(cardNumberErrorMsg.isDisplayed());
-		cardNumber.sendKeys(getValue(1, 6));
-		cardHolderName.sendKeys(getValue(1, 7));
-		cvvNumber.sendKeys(getValue(1, 8));
-		Thread.sleep(2000);
+	
+	@Test(priority = 12)
+	public void couponOffer() {
+		assertEquals(grandtotalprice.getText(),"5,177");
+		removecouponcode.click();
+		waitSomeTime();
+		couponcode.click();
+		waitSomeTime();
 	}
+	
+	@Test(priority =11)
+	public void enterPhoneNumber() throws Exception {
+		phonenumber.sendKeys(props.getProperty("mobileNumber"));
+		assertTrue(checkboxTandC.isEnabled());
+		
+	}
+	
 	
 	@AfterClass
 	public void afterClass() throws InterruptedException {
 		Thread.sleep(3000);
 		driver.quit();
 	}
+	
 }
