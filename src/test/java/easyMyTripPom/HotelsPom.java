@@ -21,12 +21,12 @@ public class HotelsPom extends Base {
 	@FindBy(xpath = "//*[@id=\"htl_dates\"]")
 	protected WebElement checkin_button;
 
-	@FindBy(xpath = "//div[@id='ui-datepicker-div']/div[1]/table[1]/tbody[1]/tr[4]/td[6]/a")
+	@FindBy(xpath="//*[@id=\"ui-datepicker-div\"]/div[1]/table/tbody/tr[5]/td[5]/a")
 	protected WebElement check_in;
-
-	@FindBy(xpath = "//div[@id='ui-datepicker-div']/div[1]/table[1]/tbody[1]/tr[5]/td[1]/a")
+	
+	@FindBy(xpath="//*[@id=\"ui-datepicker-div\"]/div[1]/table/tbody/tr[5]/td[7]/a")
 	protected WebElement check_out;
-
+	
 	@FindBy(xpath = "//a[normalize-space()='Add Room']")
 	protected WebElement Add_Room;
 

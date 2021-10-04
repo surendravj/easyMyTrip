@@ -1,89 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
+<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-04T10:25:36 IST" name="Default suite" finished-at="2021-10-04T10:26:00 IST" duration-ms="23864">
+  <suite started-at="2021-10-04T15:57:33 IST" name="Default suite" finished-at="2021-10-04T15:58:05 IST" duration-ms="32530">
     <groups>
     </groups>
-    <test started-at="2021-10-04T10:25:36 IST" name="Default test" finished-at="2021-10-04T10:26:00 IST" duration-ms="23864">
-      <class name="easyMyTrip.Flights">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:36 IST" name="beforeClass" finished-at="2021-10-04T10:25:39 IST" duration-ms="3185" status="PASS">
+    <test started-at="2021-10-04T15:57:33 IST" name="Default test" finished-at="2021-10-04T15:58:05 IST" duration-ms="32530">
+      <class name="easyMyTrip.FlightsOneTrip">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:33 IST" name="beforeClass" finished-at="2021-10-04T15:57:41 IST" duration-ms="7915" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="NavigateToFlights()[pri:1, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:39 IST" name="NavigateToFlights" finished-at="2021-10-04T10:25:40 IST" duration-ms="739" status="PASS">
+        <test-method signature="NavigateToOneWay()[pri:1, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:41 IST" name="NavigateToOneWay" finished-at="2021-10-04T15:57:43 IST" duration-ms="2086" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NavigateToFlights -->
-        <test-method signature="selectDepartureCity()[pri:2, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:40 IST" name="selectDepartureCity" finished-at="2021-10-04T10:25:40 IST" duration-ms="671" status="PASS">
+        </test-method> <!-- NavigateToOneWay -->
+        <test-method signature="departureCitySelect()[pri:2, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:43 IST" name="departureCitySelect" finished-at="2021-10-04T15:57:43 IST" duration-ms="615" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectDepartureCity -->
-        <test-method signature="selectDestinationCity()[pri:3, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:40 IST" name="selectDestinationCity" finished-at="2021-10-04T10:25:41 IST" duration-ms="584" status="PASS">
+        </test-method> <!-- departureCitySelect -->
+        <test-method signature="selectDestinationCity()[pri:3, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:43 IST" name="selectDestinationCity" finished-at="2021-10-04T15:57:44 IST" duration-ms="127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectDestinationCity -->
-        <test-method signature="selectDates()[pri:4, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:41 IST" name="selectDates" finished-at="2021-10-04T10:25:41 IST" duration-ms="184" status="PASS">
+        <test-method signature="dateSelect()[pri:4, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:44 IST" name="dateSelect" finished-at="2021-10-04T15:57:44 IST" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- selectDates -->
-        <test-method signature="checkClassSelectionTest()[pri:5, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:41 IST" name="checkClassSelectionTest" finished-at="2021-10-04T10:25:41 IST" duration-ms="187" status="PASS">
+        </test-method> <!-- dateSelect -->
+        <test-method signature="checkClassSelection()[pri:5, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:44 IST" name="checkClassSelection" finished-at="2021-10-04T15:57:44 IST" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkClassSelectionTest -->
-        <test-method signature="selectTravellers()[pri:6, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:41 IST" name="selectTravellers" finished-at="2021-10-04T10:25:43 IST" duration-ms="1855" status="PASS">
+        </test-method> <!-- checkClassSelection -->
+        <test-method signature="selectTravellers()[pri:6, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:44 IST" name="selectTravellers" finished-at="2021-10-04T15:57:45 IST" duration-ms="1097" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectTravellers -->
-        <test-method signature="chooseFlightsTest()[pri:7, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:43 IST" name="chooseFlightsTest" finished-at="2021-10-04T10:25:44 IST" duration-ms="578" status="PASS">
+        <test-method signature="selectFare()[pri:7, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:45 IST" name="selectFare" finished-at="2021-10-04T15:57:50 IST" duration-ms="4733" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- chooseFlightsTest -->
-        <test-method signature="verifyFlightDetails()[pri:8, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:44 IST" name="verifyFlightDetails" finished-at="2021-10-04T10:25:47 IST" duration-ms="3202" status="PASS">
+        </test-method> <!-- selectFare -->
+        <test-method signature="refundPolicy()[pri:8, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:50 IST" name="refundPolicy" finished-at="2021-10-04T15:57:50 IST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyFlightDetails -->
-        <test-method signature="flightDetailsTest()[pri:9, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:47 IST" name="flightDetailsTest" finished-at="2021-10-04T10:25:47 IST" duration-ms="484" status="PASS">
+        </test-method> <!-- refundPolicy -->
+        <test-method signature="travelInsurance()[pri:9, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:50 IST" name="travelInsurance" finished-at="2021-10-04T15:57:50 IST" duration-ms="211" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- flightDetailsTest -->
-        <test-method signature="emailErrorMsgTest()[pri:10, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:47 IST" name="emailErrorMsgTest" finished-at="2021-10-04T10:25:48 IST" duration-ms="251" status="PASS">
+        </test-method> <!-- travelInsurance -->
+        <test-method signature="contactEmail()[pri:10, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:50 IST" name="contactEmail" finished-at="2021-10-04T15:57:50 IST" duration-ms="416" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emailErrorMsgTest -->
-        <test-method signature="verifyContactEmail()[pri:11, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:48 IST" name="verifyContactEmail" finished-at="2021-10-04T10:25:48 IST" duration-ms="141" status="PASS">
+        </test-method> <!-- contactEmail -->
+        <test-method signature="enterPhoneNumber()[pri:11, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:50 IST" name="enterPhoneNumber" finished-at="2021-10-04T15:57:51 IST" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyContactEmail -->
-        <test-method signature="invalidNumberTest()[pri:12, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:48 IST" name="invalidNumberTest" finished-at="2021-10-04T10:25:48 IST" duration-ms="232" status="PASS">
+        </test-method> <!-- enterPhoneNumber -->
+        <test-method signature="couponOffer()[pri:12, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:51 IST" name="couponOffer" finished-at="2021-10-04T15:57:51 IST" duration-ms="355" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- invalidNumberTest -->
-        <test-method signature="verifyContactNumber()[pri:13, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:48 IST" name="verifyContactNumber" finished-at="2021-10-04T10:25:48 IST" duration-ms="249" status="PASS">
+        </test-method> <!-- couponOffer -->
+        <test-method signature="travellerDetails()[pri:13, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:51 IST" name="travellerDetails" finished-at="2021-10-04T15:57:51 IST" duration-ms="258" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyContactNumber -->
-        <test-method signature="firstNameInputTest()[pri:14, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:48 IST" name="firstNameInputTest" finished-at="2021-10-04T10:25:49 IST" duration-ms="240" status="PASS">
+        </test-method> <!-- travellerDetails -->
+        <test-method signature="preferenceTest()[pri:14, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:51 IST" name="preferenceTest" finished-at="2021-10-04T15:57:52 IST" duration-ms="470" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- firstNameInputTest -->
-        <test-method signature="lastNameInputTest()[pri:15, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:49 IST" name="lastNameInputTest" finished-at="2021-10-04T10:25:49 IST" duration-ms="69" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- lastNameInputTest -->
-        <test-method signature="passengerTitleTest()[pri:16, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:49 IST" name="passengerTitleTest" finished-at="2021-10-04T10:25:49 IST" duration-ms="138" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- passengerTitleTest -->
-        <test-method signature="paymentTest()[pri:17, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:49 IST" name="paymentTest" finished-at="2021-10-04T10:25:59 IST" duration-ms="9799" status="PASS">
+        </test-method> <!-- preferenceTest -->
+        <test-method signature="paymentTest()[pri:15, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:57:52 IST" name="paymentTest" finished-at="2021-10-04T15:58:01 IST" duration-ms="9500" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paymentTest -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:easyMyTrip.Flights@25290bca]" started-at="2021-10-04T10:25:59 IST" name="afterClass" finished-at="2021-10-04T10:26:00 IST" duration-ms="1028" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:easyMyTrip.FlightsOneTrip@4760f169]" started-at="2021-10-04T15:58:01 IST" name="afterClass" finished-at="2021-10-04T15:58:05 IST" duration-ms="4049" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- easyMyTrip.Flights -->
+      </class> <!-- easyMyTrip.FlightsOneTrip -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -31,7 +31,7 @@ public class Base {
 	public void loadProps() throws IOException {
 		FileReader reader = new FileReader("src//test//resources//config.properties");
 		props.load(reader);
-		File src = new File("src\\test\\resources\\easeMyTripFramework.xlsx");
+		File src = new File("src\\test\\resources\\easeMyTripFramework (1).xlsx");
 		FileInputStream fin = new FileInputStream(src);
 		workbook = new XSSFWorkbook(fin);
 	}

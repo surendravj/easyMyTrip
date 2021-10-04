@@ -127,7 +127,6 @@ public class Flights extends FlightsPom {
 		moveToElement(driver.findElement(By.cssSelector(".emtSecure")));
 		emailInput.clear();
 		continueBookingBtn.click();
-		//assertTrue(emailErrorMsg.isDisplayed());
 		assertEquals(emailErrorMsg.getText(), "Please enter a valid email Id");
 	}
 
@@ -181,9 +180,14 @@ public class Flights extends FlightsPom {
 		Thread.sleep(5000);
 		continuebooking.click();
 		makePaymentBtn.click();
-		//assertTrue(cardNumberErrorMsg.isDisplayed());
 		cardNumber.sendKeys(getValue(1, 6));
 		cardHolderName.sendKeys(getValue(1, 7));
+		cardMonth.click();
+		waitSomeTime();
+		monthselect.click();
+		cardYear.click();
+		waitSomeTime();
+		yearselect.click();
 		cvvNumber.sendKeys(getValue(1, 8));
 		Thread.sleep(2000);
 	}

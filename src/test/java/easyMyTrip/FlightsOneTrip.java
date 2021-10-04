@@ -177,10 +177,15 @@ public class FlightsOneTrip extends FlightsOneTripPom {
 	public void paymentTest() throws Exception {
 		Thread.sleep(5000);
 		continuebooking.click();
-		makePaymentBtn.click();
-		//assertTrue(cardNumberErrorMsg.isDisplayed());
+		Thread.sleep(2000);
 		cardNumber.sendKeys(getValue(1, 6));
 		cardHolderName.sendKeys(getValue(1, 7));
+		cardMonth.click();
+		waitSomeTime();
+		monthselect.click();
+		cardYear.click();
+		waitSomeTime();
+		yearselect.click();
 		cvvNumber.sendKeys(getValue(1, 8));
 		Thread.sleep(2000);
 	}

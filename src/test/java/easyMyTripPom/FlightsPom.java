@@ -140,8 +140,14 @@ public class FlightsPom extends Base {
 	@FindBy(id="CCMM")
 	protected WebElement cardMonth;
 	
+	@FindBy(css = "select[id='CCMM'] option[value='05']")
+	protected WebElement monthselect;
+	
 	@FindBy(id="CCYYYY")
 	protected WebElement cardYear;
+	
+	@FindBy(css = "select[id='CCYYYY'] option[value='2030']")
+	protected WebElement yearselect;
 	
 	@FindBy(id="CCCVV")
 	protected WebElement cvvNumber;

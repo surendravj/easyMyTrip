@@ -155,6 +155,7 @@ public class Hotels extends HotelsPom {
 		waitSomeTime();
 		gender.click();
 		genderMiss.click();
+		fnameA.click();
 		fnameA.sendKeys(getValue(1, 0));
 		lnameA.click();
 		lnameA.sendKeys(getValue(1, 1));

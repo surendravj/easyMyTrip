@@ -182,8 +182,16 @@ public class FlightsOneTripPom extends Base {
 	@FindBy(id="CCMM")
 	protected WebElement cardMonth;
 	
+
+	@FindBy(css = "select[id='CCMM'] option[value='05']")
+	protected WebElement monthselect;
+	
 	@FindBy(id="CCYYYY")
 	protected WebElement cardYear;
+	
+	@FindBy(css = "select[id='CCYYYY'] option[value='2030']")
+	protected WebElement yearselect;
+	
 	
 	@FindBy(id="CCCVV")
 	protected WebElement cvvNumber;
@@ -191,7 +199,7 @@ public class FlightsOneTripPom extends Base {
 	@FindBy(id="#spnCardErrorSpn")
 	protected WebElement cardNumberErrorMsg;
 	
-	@FindBy(className = "mk-pym")
+	@FindBy(xpath = "//*[@id=\"card\"]/div[9]")
 	protected WebElement makePaymentBtn;
 	
 }
